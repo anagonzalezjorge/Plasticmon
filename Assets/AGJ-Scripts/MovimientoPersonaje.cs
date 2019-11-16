@@ -30,9 +30,11 @@ public class MovimientoPersonaje : MonoBehaviour
     void MovimientoEnSuelo()
     {
         //Calcul la velocidad basada en los inputs
-        float xVelocity = velocidad * input.horizontal;
+          float xVelocity = velocidad * input.horizontal;
+
         //AGJ - Guarda la velocidad en el componente RigidBody del personaje
-        rigidBody.velocity = new Vector3(xVelocity, rigidBody.velocity.y, 0f);
+         rigidBody.velocity = new Vector3(xVelocity, rigidBody.velocity.y, 0f);
+
     }
 
     void MovimientoEnAire()
