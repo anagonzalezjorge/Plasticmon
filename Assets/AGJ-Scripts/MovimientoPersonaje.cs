@@ -10,25 +10,26 @@ public class MovimientoPersonaje : MonoBehaviour
     /*AGJ - Referencia para poder aplicar la fuerza par amoverlo o que salte*/
     Rigidbody2D rigidBody;                  //The rigidbody component
 
-    float jumpTime;                         //Variable to hold jump duration
-    float coyoteTime;                       //Variable to hold coyote duration
-    float playerHeight;                     //Height of the player
-  
-    /*AGJ - originalXScale guarda la escala en X original, para saber
-                                             *si está mirando a la derecha o a la izquierda*/
-    float originalXScale;                   //Original scale on X axis
-    int direction = 1;
-
+    public float speed = 8f;				//Velocidad del jugador
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        input = GetComponent<InputPersonaje>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        bodyCollider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        MovimientoEnSuelo();
+    }
+
+    void MovimientoEnSuelo()
+    {
+        //Calcul la velocidad basada en los inputs
+        float xVelocity = speed * input.horizontal;
+        //AGJ - Guarda la velocidad en el componente RigidBody del personaje
+        rigidBody.velocity = new Vector2(xVelocity, rigidBody.velocity.y);
     }
 }

@@ -31,7 +31,11 @@ public class InputPersonaje : MonoBehaviour
     void ProcesaInputs()
     {
         horizontal += Input.GetAxis("Horizontal");
+        //AGJ - Utiliza OR para no perder las pulsaciones de teclas entre los distintos fotogramas.
+        jumpPressed = jumpPressed || Input.GetButtonDown("Jump");
+        jumpHeld = jumpHeld || Input.GetButton("Jump");
+
     }
-    
+
 
 }
