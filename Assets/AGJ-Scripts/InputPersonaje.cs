@@ -14,14 +14,14 @@ public class InputPersonaje : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //AGJ - Procesa los valores de entrada del jugador
-        ProcesaInputs();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //AGJ - Procesa los valores de entrada del jugador
+        ProcesaInputs();
     }
     //AGJ - Acumula las pulsaciones que se realizan entre fotograma y fotograma
     /*Los valores de GetAxis van de -1 a 1:

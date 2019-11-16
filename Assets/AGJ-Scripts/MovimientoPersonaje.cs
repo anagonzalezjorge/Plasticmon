@@ -4,32 +4,43 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    InputPersonaje input;                     
+    InputPersonaje input;
     /*AGJ - Acceder al collider y modificarlo según el movimiento pulsado*/
-    BoxCollider2D bodyCollider;             //The collider component
-    /*AGJ - Referencia para poder aplicar la fuerza par amoverlo o que salte*/
-    Rigidbody2D rigidBody;                  //The rigidbody component
+    BoxCollider bodyCollider;
+    /*AGJ - Referencia para poder aplicar la fuerza para moverlo o que salte*/
+    Rigidbody rigidBody;                  //Componente rigidbody
 
-    public float speed = 8f;				//Velocidad del jugador
+    public float velocidad;				//Velocidad del jugador
+    public float FuerzaSalto;
 
     // Start is called before the first frame update
     void Start()
     {
         input = GetComponent<InputPersonaje>();
-        rigidBody = GetComponent<Rigidbody2D>();
-        bodyCollider = GetComponent<BoxCollider2D>();
+        rigidBody = GetComponent<Rigidbody>();
+        bodyCollider = GetComponent<BoxCollider>();
     }
 
     private void FixedUpdate()
     {
         MovimientoEnSuelo();
+        MovimientoEnAire();
     }
 
     void MovimientoEnSuelo()
     {
         //Calcul la velocidad basada en los inputs
-        float xVelocity = speed * input.horizontal;
+        float xVelocity = velocidad * input.horizontal;
         //AGJ - Guarda la velocidad en el componente RigidBody del personaje
-        rigidBody.velocity = new Vector2(xVelocity, rigidBody.velocity.y);
+        rigidBody.velocity = new Vector3(xVelocity, rigidBody.velocity.y, 0f);
+    }
+
+    void MovimientoEnAire()
+    {
+     if (input.jumpPressed)
+			{
+				rigidBody.AddForce( Vector3.up*FuerzaSalto, ForceMode.Impulse);
+				return;
+			}
     }
 }
