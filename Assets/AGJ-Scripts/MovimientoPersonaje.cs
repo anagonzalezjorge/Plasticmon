@@ -37,7 +37,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void MovimientoEnAire()
     {
-     if (input.jumpPressed)
+     if (Input.GetButtonDown("Jump"))
 			{
 				rigidBody.AddForce( Vector3.up*FuerzaSalto, ForceMode.Impulse);
 				return;
