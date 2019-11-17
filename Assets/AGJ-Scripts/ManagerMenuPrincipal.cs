@@ -13,9 +13,14 @@ public class ManagerMenuPrincipal : MonoBehaviour
     public Button Atras;
     public Button Salir;
 
+
+    private void Awake()
+    {
+        Jugar.gameObject.SetActive(true);
+    }
     private void Start()
     {
-        Jugar.enabled = true;
+        
         Time.timeScale = 0;
     }
 

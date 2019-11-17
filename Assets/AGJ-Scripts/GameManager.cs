@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
 
         //If there are no more orbs, tell the door to open
-        // if (current.Items.Count == 0)
+         if (current.Items.Count == 0)
         //current.lockedDoor.Open();
 
         //Indica a UIManager actualizar con el número de items
