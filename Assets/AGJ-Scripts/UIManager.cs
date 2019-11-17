@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        current.enabled = true;
         //This is the current UIManager and it should persist between scene loads
         current = this;
         DontDestroyOnLoad(gameObject);

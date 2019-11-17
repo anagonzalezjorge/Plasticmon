@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2e8dddce95f2ff0448f657c1a13b7a21
+guid: 29996059a7e018f419f5876b1e24666c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -71,7 +71,9 @@ ModelImporter:
     400062: Nariz
     400064: Plane001
     400066: //RootNode
-    2100000: 'Material #26'
+    2100000: 'Material #50'
+    2100002: 'Material #51'
+    2100004: 'Material #52'
     2300000: Box002
     2300002: Cabeza
     2300004: Cylinder001
@@ -94,13 +96,12 @@ ModelImporter:
     4300002: Cylinder003
     4300004: Cylinder005
     4300006: Cylinder004
-    4300008: Plane001
-    4300010: Cylinder002
+    4300008: Cylinder002
+    4300010: Plane001
     4300012: Cylinder001
     4300014: Box002
     4300016: Nariz
     4300018: Cabeza
-    7400000: Take 001
     9500000: //RootNode
     13700000: Cuerpo
   externalObjects: {}
@@ -130,35 +131,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 46
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

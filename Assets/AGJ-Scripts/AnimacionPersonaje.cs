@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimacionPersonaje : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class AnimacionPersonaje : MonoBehaviour
 
     public void Start()
     {
-        velocidadParamID = Animator.StringToHash("velocidad");
+        velocidadParamID = Animator.StringToHash("speed");
         fallParamID = Animator.StringToHash("verticalVelocity");
 
         movement = GetComponent<MovimientoPersonaje>();
@@ -35,6 +36,6 @@ public class AnimacionPersonaje : MonoBehaviour
 
         //Use the absolute value of speed so that we only pass in positive numbers
         /*AGJ - Velocidad del personaje, para saber si anda o corre*/
-        anim.SetFloat(velocidadParamID, Mathf.Abs(input.horizontal));
+        anim.SetFloat(velocidadParamID, rigidBody.velocity.x);
     }
 }

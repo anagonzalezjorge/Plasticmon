@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2e8dddce95f2ff0448f657c1a13b7a21
+guid: 26bfe63bdf51d114fb22fb9e2472df3c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -94,8 +94,8 @@ ModelImporter:
     4300002: Cylinder003
     4300004: Cylinder005
     4300006: Cylinder004
-    4300008: Plane001
-    4300010: Cylinder002
+    4300008: Cylinder002
+    4300010: Plane001
     4300012: Cylinder001
     4300014: Box002
     4300016: Nariz
@@ -135,7 +135,7 @@ ModelImporter:
       name: Take 001
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 46
+      lastFrame: 288
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
