@@ -1,0 +1,16 @@
+{
+"companyName": "DEIM",
+"productName": "HTML",
+"productVersion": "0.1",
+"dataUrl": "HTML_Portfolio.data.unityweb",
+"wasmCodeUrl": "HTML_Portfolio.wasm.code.unityweb",
+"wasmFrameworkUrl": "HTML_Portfolio.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.12f1"
+}
